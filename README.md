@@ -71,4 +71,25 @@ srun --qos=debug -n 3 hostname
 
 
 ## Software
-asd
+Software is configured using environment modules. You can view what is available with
+```
+module avail
+```
+The following will make available many other options
+```
+module load accelerator/path
+```
+or
+```
+module load spack
+```
+
+### Accelerator Software
+To load all of the default accelerator software
+```
+module load accelerator
+```
+or to choose individually first load
+```
+module load accelerator/path
+```
