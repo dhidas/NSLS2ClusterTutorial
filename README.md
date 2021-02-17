@@ -5,16 +5,24 @@ Cluster tutorial for NSLS-II Cluster
 Login to the system requires your BNL credentials, not NSLS-II credentials
 ```
 ssh -Y ssh.nsls2.bnl.gov
-ssh -y pluto
+ssh -Y pluto
 ```
 
-## Simple SLURM Test
+## Basics on running slurm jobs
+
+### Simple SLURM Test
 If this test does not work you should ask for privileges
 ```
-srun --qos=normal hostname
+srun hostname
 ```
 
-## Useful SLURM Comands
+### Important note on Time Limits and QOS
+You will almost always need to specify the time you are requesting and the QOS, for example:
+```
+srun --qos=normal -t 15 hostname  # for 15 minutes using normal qos
+```
+
+### Useful SLURM Comands
 ```
 sacctmgr show qos     # Show qos information including time limits
 squeue                # List what is in the queue
@@ -26,7 +34,7 @@ srun --x11 --pty bash # Get a shell on a worker node with x11 forwarding
 
 ```
 
-## Job Submission
+### Job Submission
 Typically this is done via a submit.sh file with the command:
 ```
 sbatch submit.sh
@@ -44,7 +52,7 @@ where for example the submit.sh file might look like:
 srun [executable or script name here]
 ```
 
-## SLURM QOS and Time Limits
+### SLURM QOS and Time Limits
 The default qos is 'normal' and default time limit is very small.  You should always specify the time you want.  On the command line this is, for example:
 ```
 srun --qos=long -t 0-13:00:00 ./myexe  # for 13 hours
@@ -55,8 +63,12 @@ and in a submit script this would be
 #SBATCH --time=0-13:00:00
 ```
 
-## Debug
+### Debug
 The QOS for debug is higher priority, but has limited available CPU and a very short time limit.  To use this, for example:
 ```
 srun --qos=debug -n 3 hostname
 ```
+
+
+## Software
+asd
