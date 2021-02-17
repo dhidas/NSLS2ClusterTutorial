@@ -29,9 +29,7 @@ squeue                # List what is in the queue
 sinfo                 # Print information on cluster
 srun                  # Run a SLURM job on the command line
 sbatch                # Submit a SLURM batch job
-
 srun --x11 --pty bash # Get a shell on a worker node with x11 forwarding
-
 ```
 
 ### Job Submission
