@@ -108,3 +108,23 @@ or to choose individually first load
 ```
 module load accelerator/path
 ```
+
+## GPU Usage and Programming
+### GPU Access
+To access the GPUs on the cluster you must include the --gres=gpu flag
+
+### GPU Programming
+If you wish to write code for GPUs there are several ways.  The first is to write cuda directly and use the nvidia hpc tools for compilation which you can load and checn the version with
+```
+module load nvhpc
+nvcc --version
+```
+Another way is to use openmp target offloading.  There are two special compilers available for this available via
+```
+module load accelerator/path
+module load gcc/9.3.0-offload   # This is the default (and will work well with other packages under accelerator/path
+```
+An alternative if one needs it is
+```
+module load gcc/10.2.0-offload
+```
