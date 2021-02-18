@@ -21,10 +21,18 @@ If this test does not work you should ask for privileges
 srun hostname
 ```
 
-### Important note on Time Limits and QOS
+### Important note on Time Limits, QOS, and GPUs
 You will almost always need to specify the time you are requesting and the QOS, for example:
 ```
 srun --qos=normal -t 15 hostname  # for 15 minutes using normal qos
+```
+Just because you have been allocated a gpu* machine does not give you access to the GPU itself.  If you want access to the GPU you must include a --gres=gpu, for example try the following with and without it
+```
+srun --gres=gpu nvidia-smi
+```
+Similarly this should be placed in a submit script using (but ONLY if you really need it)
+```
+#SBATCH --gres=gpu
 ```
 
 ### Useful SLURM Comands
