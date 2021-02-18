@@ -86,17 +86,21 @@ Software is configured using environment modules. You can view what is available
 ```
 module avail
 ```
-The following will make available many other options
-```
-module load accelerator/path
-```
-or
+The following will make available many standard options for all cluster users
 ```
 module load spack
 ```
+A suite of accelerator codes, offloading compilers, and software can be found (and used by anyone)
+```
+module load accelerator/path
+```
+Conda is available
+```
+module load anaconda3
+```
 
 ### Accelerator Software
-To load all of the default accelerator software
+To load *all* of the default accelerator software
 ```
 module load accelerator
 ```
