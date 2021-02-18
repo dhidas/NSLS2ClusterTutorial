@@ -1,6 +1,11 @@
 # NSLS2ClusterTutorial
 Cluster tutorial for NSLS-II Cluster
 
+This tutorial contains several examples in subdirectories.  To clone these examples locally:
+```
+git clone https://github.com/dhidas/NSLS2ClusterTutorial.git
+```
+
 ## Login
 Login to the system requires your BNL credentials, not NSLS-II credentials
 ```
