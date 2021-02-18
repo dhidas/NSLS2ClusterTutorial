@@ -94,6 +94,10 @@ or
 ```
 module load spack
 ```
+Conda is available
+```
+module load anaconda3
+```
 
 ### Accelerator Software
 To load all of the default accelerator software
