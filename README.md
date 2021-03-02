@@ -13,6 +13,11 @@ ssh -Y ssh.nsls2.bnl.gov
 ssh -Y pluto
 ```
 
+## Help
+Get help on the Cluster Teams discussion:
+https://teams.microsoft.com/l/channel/19%3ad6ec59ad69f24ee197fb0f82aa989979%40thread.skype/Cluster?groupId=0ae37900-a0ad-4249-bcce-456329a3bb2b&tenantId=89561e60-dc75-4c28-a1c9-2e8d8870196b
+
+
 ## Basics on running slurm jobs
 
 ### Simple SLURM Test
