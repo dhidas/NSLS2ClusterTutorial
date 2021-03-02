@@ -75,7 +75,11 @@ and in a submit script this would be
 ```
 
 ### Debug
-The QOS for debug is higher priority, but has limited available CPU and a very short time limit.  To use this, for example:
+There is a dedicated partition for debugging which you can use (add --gres=gpu if you need the gpu)
+```
+srun -p debug -n 3 hostname
+```
+There is also QOS for debug on the usual nodes with higher priority, but has limited available CPU and a very short time limit.  To use this, for example:
 ```
 srun --qos=debug -n 3 hostname
 ```
