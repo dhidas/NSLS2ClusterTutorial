@@ -13,6 +13,17 @@ ssh -Y ssh.nsls2.bnl.gov
 ssh -Y pluto
 ```
 
+## Copying files from other NSLS-II machines
+Copying a file typically requires a multi-hop copy.  Here are some examples
+```
+user@box64-3:~$ scp -oProxyJump=ssh.nsls2.bnl.gov originfile user@pluto:~/destfile
+user@physics03:~$ scp -oProxyJump=ssh01,ssh.nsls2.bnl.gov originfile user@pluto:~/destfile
+```
+or from apcpu-master simply
+```
+user@apcpu-master:~$ scp originfile user@pluto:~/destfile
+```
+
 ## Help
 Get help on the Cluster Teams discussion:
 https://teams.microsoft.com/l/channel/19%3ad6ec59ad69f24ee197fb0f82aa989979%40thread.skype/Cluster?groupId=0ae37900-a0ad-4249-bcce-456329a3bb2b&tenantId=89561e60-dc75-4c28-a1c9-2e8d8870196b
