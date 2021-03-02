@@ -112,6 +112,11 @@ or to choose individually first load
 ```
 module load accelerator/path
 ```
+#### PyElegant
+To load pyelegant
+```
+module load accelerator pyelegant
+```
 
 ## GPU Usage and Programming
 ### GPU Access
