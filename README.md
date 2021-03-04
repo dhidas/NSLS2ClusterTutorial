@@ -15,7 +15,7 @@ ssh -Y pluto
 More detailed instructions can be found at https://dogbert.nsls2.bnl.gov/docs/remote/ssh.html
 
 ## Copying files from other NSLS-II machines
-Copying a file typically requires a multi-hop copy.  Here are some examples
+Copying a file typically requires a multi-hop copy.  Here are some examples (may require a mix of NSLS-II and BNL credentials)
 ```
 user@box64-3:~$ scp -oProxyJump=ssh.nsls2.bnl.gov originfile user@pluto:~/destfile
 user@physics03:~$ scp -oProxyJump=ssh01,ssh.nsls2.bnl.gov originfile user@pluto:~/destfile
