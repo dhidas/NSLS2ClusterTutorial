@@ -20,10 +20,11 @@ Copying a file typically requires a multi-hop copy.  Here are some examples
 user@box64-3:~$ scp -oProxyJump=ssh.nsls2.bnl.gov originfile user@pluto:~/destfile
 user@physics03:~$ scp -oProxyJump=ssh01,ssh.nsls2.bnl.gov originfile user@pluto:~/destfile
 ```
-or from apcpu-master simply
+or from apcpu-master simply (there are some aliases defined in /etc/ssh/ssh_config)
 ```
 user@apcpu-master:~$ scp originfile user@pluto:~/destfile
 ```
+on apcpu-master consider 'kinit', and ssh keys to save typing so many passwords.
 
 ## Help
 Get help on the Cluster Teams discussion:
