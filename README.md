@@ -9,8 +9,8 @@ git clone https://github.com/dhidas/NSLS2ClusterTutorial.git
 ## Login
 Login to the system requires your BNL credentials, not NSLS-II credentials
 ```
-ssh -Y ssh.nsls2.bnl.gov
-ssh -Y pluto
+ssh -Y ssh.nsls2.bnl.gov    # directs you to ssh1,2,3,4 gateways
+ssh -Y pluto                # directs you to submit1,2
 ```
 More detailed instructions can be found at https://dogbert.nsls2.bnl.gov/docs/remote/ssh.html
 
@@ -24,7 +24,10 @@ or from apcpu-master simply (there are some aliases defined in /etc/ssh/ssh_conf
 ```
 user@apcpu-master:~$ scp originfile user@pluto:~/destfile
 ```
-on apcpu-master consider 'kinit', and ssh keys to save typing so many passwords.
+on apcpu-master consider 'kinit', and ssh keys to save typing so many passwords, then using:
+```
+user@apcpu-master:~$ scp originfile user@submit1:~/destfile
+```
 
 ## Help
 Get help on the Cluster Teams discussion:
