@@ -12,7 +12,7 @@ Login to the system requires your BNL credentials, not NSLS-II credentials
 ssh -Y ssh.nsls2.bnl.gov    # directs you to ssh1,2,3,4 gateways
 ssh -Y pluto                # directs you to submit1,2
 ```
-More detailed instructions can be found at https://dogbert.nsls2.bnl.gov/docs/remote/ssh.html
+More detailed instructions can be found at https://www-dev.nsls2.bnl.gov/docs/remote/ssh.html
 
 ## Copying files from other NSLS-II machines
 Copying a file typically requires a multi-hop copy.  Here are some examples (may require a mix of NSLS-II and BNL credentials)
