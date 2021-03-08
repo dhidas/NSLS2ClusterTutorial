@@ -1,7 +1,7 @@
 # NSLS2ClusterTutorial
 Cluster tutorial for NSLS-II Cluster
 
-This tutorial contains several examples in subdirectories.  To clone these examples locally:
+Several basic examples can be found at https://github.com/dhidas/NSLS2ClusterTutorial/.  To clone these examples locally:
 ```
 git clone https://github.com/dhidas/NSLS2ClusterTutorial.git
 ```
@@ -13,6 +13,17 @@ ssh -Y ssh.nsls2.bnl.gov    # directs you to ssh1,2,3,4 gateways
 ssh -Y pluto                # directs you to submit1,2
 ```
 More detailed instructions can be found at https://www-dev.nsls2.bnl.gov/docs/remote/ssh.html
+
+## Data Directories
+Home directories have a quota.  Should you need more space it may be found in project areas at (by request)
+```
+/nsls2/data/
+```
+for accelerator users you may make note of the following areas (by default)
+```
+/nsls2/data/ap/users
+/nsls2/data/ap/projects
+```
 
 ## Copying files from other NSLS-II machines
 Copying a file typically requires a multi-hop copy.  Here are some examples (may require a mix of NSLS-II and BNL credentials)
