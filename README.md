@@ -15,7 +15,7 @@ ssh -Y pluto                # directs you to submit1,2
 More detailed instructions can be found at https://www-dev.nsls2.bnl.gov/docs/remote/ssh.html
 
 ## Data Directories
-Home directories have a quota.  Should you need more space it may be found in project areas at (by request)
+Home directories have a quota of about 10 GB.  Should you need more space it may be found in project areas at (by request)
 ```
 /nsls2/data/
 ```
