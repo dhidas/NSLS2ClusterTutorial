@@ -12,33 +12,29 @@ Login to the system requires your BNL credentials, not NSLS-II credentials
 ssh -Y ssh.nsls2.bnl.gov    # directs you to ssh1,2,3,4 gateways
 ssh -Y pluto                # directs you to submit1,2
 ```
-More detailed instructions can be found at https://www-dev.nsls2.bnl.gov/docs/remote/ssh.html
+More detailed instructions can be found at https://www-dev.nsls2.bnl.gov/docs/remote/ssh.html (internal BNL)
 
 ## Data Directories
 Home directories have a quota of about 10 GB.  Should you need more space it may be found in project areas at (by request)
 ```
 /nsls2/data/
 ```
-for accelerator users you may make note of the following areas (by default)
+for accelerator users you may make note of the following areas (by default) with much more space
 ```
 /nsls2/data/ap/users
 /nsls2/data/ap/projects
 ```
 
+## Jupyter
+A jupyterhub exists and is accessible from outside as well as inside BNL:
+https://jupyter.nsls2.bnl.gov
+
+Once logged in, select the "Scientific Python (accelerator)" which will give the environment equivalent to "module load accelerator".  12 hours idle will end your session.
+
+You can open a terminal in jupyter, but you cannot submit slurm jobs from it.  You can however "ssh -t ssh.nsls2 ssh pluto" from it and then submit jobs from the submit node.
+
 ## Copying files from other NSLS-II machines
-Copying a file typically requires a multi-hop copy.  Here are some examples (may require a mix of NSLS-II and BNL credentials)
-```
-user@box64-3:~$ scp -oProxyJump=ssh.nsls2.bnl.gov originfile user@pluto:~/destfile
-user@physics03:~$ scp -oProxyJump=ssh01,ssh.nsls2.bnl.gov originfile user@pluto:~/destfile
-```
-or from apcpu-master simply (there are some aliases defined in /etc/ssh/ssh_config)
-```
-user@apcpu-master:~$ scp originfile user@pluto:~/destfile
-```
-on apcpu-master consider 'kinit', and ssh keys to save typing so many passwords, then using:
-```
-user@apcpu-master:~$ scp originfile user@submit1:~/destfile
-```
+This is currently changing.  Instructions will be updated when work is complete.
 
 ## Help
 Get help on the Cluster Teams discussion:
@@ -117,26 +113,10 @@ srun --qos=debug -n 3 hostname
 ```
 
 
-## Software
-Software is configured using environment modules. You can view what is available with
-```
-module avail
-```
-The following will make available many standard options for all cluster users
-```
-module load spack
-```
-A suite of accelerator codes, offloading compilers, and software can be found (and used by anyone)
-```
-module load accelerator/path
-```
-Conda is available
-```
-module load anaconda3
-```
+
 
 ### Accelerator Software
-To load *all* of the default accelerator software
+Software is configured using environment modules.  To load *all* of the default accelerator software
 ```
 module load accelerator
 ```
@@ -144,11 +124,17 @@ or to choose individually first load
 ```
 module load accelerator/path
 ```
+You can view what is available with (accelerator software is only seen after loading at minimum 'accelerator/path')
+```
+module avail
+```
 #### PyElegant
 To load pyelegant
 ```
 module load accelerator pyelegant
 ```
+
+
 
 ## GPU Usage and Programming
 ### GPU Access
@@ -162,10 +148,25 @@ nvcc --version
 ```
 Another way is to use openmp target offloading.  There are two special compilers available for this available via
 ```
-module load accelerator/path
-module load gcc/9.3.0-offload   # This is the default (and will work well with other packages under accelerator/path
+module load accelerator
+module swap gcc/9.3.0-offload   # This is the default (and will work well with other packages under accelerator/path
 ```
 An alternative if one needs it is
 ```
+module unload gcc
 module load gcc/10.2.0-offload
+```
+
+### Compilers
+Many versions of the gnu compilers are available.  In addition to this you will also find llvm which provides clang and flang (this is was os x uses as 'gcc').  nvhpc provides nvcc.  The intel compiler is not currently provided.
+
+
+## Other Software
+The following will make available many standard options for cluster users
+```
+module load spack
+```
+Conda is available
+```
+module load anaconda3
 ```
