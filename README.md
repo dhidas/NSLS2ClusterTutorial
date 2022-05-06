@@ -34,7 +34,12 @@ Once logged in, select the "Scientific Python (accelerator)" which will give the
 You can open a terminal in jupyter, but you cannot submit slurm jobs from it.  You can however "ssh -t ssh.nsls2 ssh pluto" from it and then submit jobs from the submit node.
 
 ## Copying files from other NSLS-II machines
-This is currently changing.  Instructions will be updated when work is complete.
+Use a "JumpHost" with the -J option in scp:
+```
+scp -J ssh.nsls2.bnl.gov localfile username@pluto:remotefile
+```
+or user jupyter to upload and download files (drag into jupyter navigator):
+https://jupyter.nsls2.bnl.gov
 
 ## Help
 Get help on the Cluster Teams discussion:
