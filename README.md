@@ -17,7 +17,9 @@ More detailed instructions can be found at https://www-dev.nsls2.bnl.gov/docs/re
 ## Home and Data Directories
 Home directories have a quota of about 100 GB:
 ```
+/nsls2/users/[USER]
 ```
+with backup snapshots at: ```/nsls2/users/.snapshot/*/[USER]```
 For data storage:
 ```
 /nsls2/data/staff/[USER]
