@@ -7,7 +7,7 @@ git clone https://github.com/dhidas/NSLS2ClusterTutorial.git
 ```
 
 ## Login
-Login to the system requires your BNL credentials, not NSLS-II credentials
+Login to the system requires your BNL credentials (+DUO Federal)
 ```
 ssh -X ssh.nsls2.bnl.gov    # directs you to ssh1,2,3,4 gateways
 ssh -X pluto                # directs you to submit1,2
@@ -117,7 +117,6 @@ There is also QOS for debug on the usual nodes with higher priority, but has lim
 ```
 srun --qos=debug -n 3 hostname
 ```
-
 
 
 
