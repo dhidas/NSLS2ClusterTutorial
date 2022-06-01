@@ -20,6 +20,7 @@ Home directories have a quota of about 100 GB:
 /nsls2/users/[USER]
 ```
 with backup snapshots at: ```/nsls2/users/.snapshot/*/[USER]```
+
 For data storage:
 ```
 /nsls2/data/staff/[USER]
