@@ -146,9 +146,9 @@ module load accelerator pyelegant
 To access the GPUs on the cluster you must include the --gres=gpu flag
 
 ### GPU Programming
-If you wish to write code for GPUs there are several ways.  The first is to write cuda directly and use the nvidia hpc tools for compilation which you can load and checn the version with
+If you wish to write code for GPUs there are several ways.  The first is to write cuda directly and use the nvidia  tools for compilation which you can load and check the version with
 ```
-module load nvhpc
+module load cuda
 nvcc --version
 ```
 Another way is to use openmp target offloading.  There are two special compilers available for this available via
