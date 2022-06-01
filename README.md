@@ -32,7 +32,7 @@ https://jupyter.nsls2.bnl.gov
 
 Once logged in, select the "Scientific Python (accelerator)" which will give the environment equivalent to "module load accelerator".  12 hours idle will end your session.
 
-You can open a terminal in jupyter, but you cannot submit slurm jobs from it.  You can however "ssh -t ssh.nsls2 ssh pluto" from it and then submit jobs from the submit node.
+You can open a terminal in jupyter, but you cannot submit slurm jobs from it.  You can however ```ssh -t ssh.nsls2 ssh pluto``` from it and then submit jobs from the submit node.
 
 ## Copying files from other NSLS-II machines
 Use a "JumpHost" with the -J option in scp:
