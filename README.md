@@ -9,20 +9,18 @@ git clone https://github.com/dhidas/NSLS2ClusterTutorial.git
 ## Login
 Login to the system requires your BNL credentials, not NSLS-II credentials
 ```
-ssh -Y ssh.nsls2.bnl.gov    # directs you to ssh1,2,3,4 gateways
-ssh -Y pluto                # directs you to submit1,2
+ssh -X ssh.nsls2.bnl.gov    # directs you to ssh1,2,3,4 gateways
+ssh -X pluto                # directs you to submit1,2
 ```
 More detailed instructions can be found at https://www-dev.nsls2.bnl.gov/docs/remote/ssh.html (internal BNL)
 
-## Data Directories
-Home directories have a quota of about 10 GB.  Should you need more space it may be found in project areas at (by request)
+## Home and Data Directories
+Home directories have a quota of about 100 GB:
 ```
-/nsls2/data/
 ```
-for accelerator users you may make note of the following areas (by default) with much more space
+For data storage:
 ```
-/nsls2/data/ap/users
-/nsls2/data/ap/projects
+/nsls2/data/staff/[USER]
 ```
 
 ## Jupyter
@@ -167,10 +165,6 @@ Many versions of the gnu compilers are available.  In addition to this you will 
 
 
 ## Other Software
-The following will make available many standard options for cluster users
-```
-module load spack
-```
 Conda is available
 ```
 module load anaconda3
