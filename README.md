@@ -115,7 +115,7 @@ srun -p debug -n 3 hostname
 ```
 There is also QOS for debug on the usual nodes with higher priority, but has limited available CPU and a very short time limit.  To use this, for example:
 ```
-srun --qos=debug -n 3 hostname
+srun --qos=debug -t 1 -n 3 hostname
 ```
 
 
