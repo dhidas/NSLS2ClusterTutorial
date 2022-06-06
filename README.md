@@ -30,7 +30,7 @@ For data storage:
 A jupyterhub exists and is accessible from outside as well as inside BNL:
 https://jupyter.nsls2.bnl.gov
 
-Once logged in, select the "Scientific Python (accelerator)" which will give the environment equivalent to "module load accelerator".  12 hours idle will end your session.
+Once logged in, select the "Accelerator Physics" which will give the environment equivalent to "module load accelerator".  After 12 hours idle your session may be terminated.
 
 You can open a terminal in jupyter, but you cannot submit slurm jobs from it.  You can however ```ssh -t ssh.nsls2 ssh pluto``` from it and then submit jobs from the submit node.
 
