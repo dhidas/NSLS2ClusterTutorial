@@ -113,7 +113,7 @@ There is a dedicated partition for debugging which you can use (add --gres=gpu i
 ```
 srun -p debug -n 3 hostname
 ```
-There is also QOS for debug on the usual nodes with higher priority, but has limited available CPU and a very short time limit.  To use this, for example:
+There is also QOS for debug on the usual nodes with higher priority (I do not recommend using this unless you need to test multi-node code), but has limited available CPU and a very short time limit.  To use this, for example:
 ```
 srun --qos=debug -t 1 -n 3 hostname
 ```
