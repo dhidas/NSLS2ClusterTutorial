@@ -10,7 +10,7 @@ git clone https://github.com/dhidas/NSLS2ClusterTutorial.git
 Login to the system requires your BNL credentials (+DUO Federal)
 ```
 ssh -X ssh.nsls2.bnl.gov    # directs you to ssh1,2,3,4 gateways
-ssh -X pluto                # directs you to submit1,2
+ssh -X pluto.nsls2.bnl.gov                # directs you to submit1,2
 ```
 More detailed instructions can be found at https://www-dev.nsls2.bnl.gov/docs/remote/ssh.html (internal BNL)
 
@@ -32,12 +32,12 @@ https://jupyter.nsls2.bnl.gov
 
 Once logged in, select the "Accelerator Physics" which will give the environment equivalent to "module load accelerator".  After 12 hours idle your session may be terminated.
 
-You can open a terminal in jupyter, but you cannot submit slurm jobs from it.  You can however ```ssh -t ssh.nsls2 ssh pluto``` from it and then submit jobs from the submit node.
+You can open a terminal in jupyter, but you cannot submit slurm jobs from it.  You can however ```ssh -t ssh.nsls2 ssh pluto.nsls2.bnl.gov``` from it and then submit jobs from the submit node.
 
 ## Copying files from other NSLS-II machines
 Use a "JumpHost" with the -J option in scp:
 ```
-scp -J ssh.nsls2.bnl.gov localfile username@pluto:remotefile
+scp -J ssh.nsls2.bnl.gov localfile username@pluto.nsls2.bnl.gov:remotefile
 ```
 or user jupyter to upload and download files (drag into jupyter navigator):
 https://jupyter.nsls2.bnl.gov
